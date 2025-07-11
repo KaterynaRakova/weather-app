@@ -29,6 +29,6 @@ Enter a city name → choose the correct one from suggestions → get accurate w
 ## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/KaterynaRakova/weather_app.git
+git clone https://github.com/KaterynaRakova/weather-app.git
 cd weather_app
 ./mvnw spring-boot:run
