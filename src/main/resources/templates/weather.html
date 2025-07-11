@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Weather</title>
+  <link rel="stylesheet" href="/css/geo.css">
+</head>
+<body>
+
+<h2 th:text="'Weather in ' + ${city}">Weather in City</h2>
+<p>🌡️ Temperature: <strong th:text="${temp}">0</strong> °C</p>
+<p>🌥️ Description: <em th:text="${desc}">clear sky</em></p>
+
+<a href="/" class="btn">🔍 New search</a>
+
+</body>
+</html>

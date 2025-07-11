@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Weather</title>
+    <link rel="stylesheet" href="/css/geo.css">
+    <!--<script src="/js/autocomplete.js" defer></script>-->
+</head>
+<body>
+<h1>🌤️ Weather App</h1>
+
+<form method="get" action="/search">
+    <label for="city">Enter city:</label><br>
+    <input type="text" name="city" id="city" placeholder="e.g. Paris" required autocomplete="off">
+    <button type="submit">Get Weather</button>
+</form>
+
+<div th:if="${error}" style="color: red;">
+    <p th:text="${error}">Error message</p>
+</div>
+</body>
+</html>

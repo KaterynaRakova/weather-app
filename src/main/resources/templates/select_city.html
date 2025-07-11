@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Select a City</title>
+    <link rel="stylesheet" href="/css/geo.css"></head>
+<body>
+<h1>Select city:</h1>
+<ul>
+    <li th:each="loc : ${locations}">
+        <a th:href="'/weather?lat=' + ${loc.lat} + '&lon=' + ${loc.lon} +
+             '&name=' + ${loc.name} + '&country=' + ${loc.country}"
+           th:text="${loc.name} + ', ' + ${loc.country} +
+            (${loc.state})">City</a>
+    </li>
+</ul>
+<a href="/" class="btn">🔄 New search</a>
+</body>
+</html>
