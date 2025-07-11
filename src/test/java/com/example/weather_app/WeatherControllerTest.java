@@ -1,5 +1,6 @@
-package com.example.weather_app.controller;
+package com.example.weather_app;
 
+import com.example.weather_app.controller.WeatherController;
 import com.example.weather_app.model.GeoLocation;
 import com.example.weather_app.model.WeatherResponse;
 import com.example.weather_app.service.GeoService;
@@ -31,10 +32,10 @@ public class WeatherControllerTest {
     @Test
     public void testSearchCity() throws Exception {
         GeoLocation location = new GeoLocation();
-        location.name = "Odessa";
-        location.country = "UA";
-        location.lat = 46.48;
-        location.lon = 30.73;
+        location.setName("Odessa");
+        location.setCountry("UA");
+        location.setLat(46.48);
+        location.setLon(30.73);
 
         Mockito.when(geoService.getLocations("Odessa"))
                 .thenReturn(List.of(location));
